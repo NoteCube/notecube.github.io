@@ -394,7 +394,7 @@ textarea.text-box {
 }
 
 .notes-block {
-  border: 1.5px solid white;
+  border: 1.5px solid rgb(140, 140, 140);
   border-radius: 12px;
   overflow: hidden;
   margin-block: 50px;
@@ -402,7 +402,8 @@ textarea.text-box {
 
 .functions {
   display: flex;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid rgb(140, 140, 140);
+
   justify-content: space-between;
   align-items: center;
   padding-inline: 30px;
@@ -723,7 +724,7 @@ footer p {
 
 .sample-img {
   width: 350px;
-  border: 1.5px solid white;
+  border: 1.5px solid rgb(140, 140, 140);
   border-radius: 5px;
   padding: 20px;
 }
