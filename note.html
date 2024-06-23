@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note | NoteCube</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="notecube.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="block">
+      <div class="flex-row-centered-links">
+        <a href="index.html" class="flex-row-centered">
+          <img class="logo" src="notecube.png" alt="LOGO" />
+          <h3 class="heading-logo">NoteCube</h3>
+        </a>
+        <div class="flex-row-centered-links">
+          <a href="index.html" class="link">Home</a>
+          <a href="note.html" class="link" style="color: yellow">Note</a>
+          <a href="about.html" class="link">About</a>
+          <a href="updates.html" class="link">Updates</a>
+          <div id="loadMenu" class="dropdown">
+            <button class="dropbtn">🔽</button>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+              <a href="note.html" style="color: yellow">Note</a>
+              <a href="about.html">About</a>
+              <a href="updates.html">Updates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="notes-block">
+        <div class="functions">
+          <div class="note-title" id="noteNameDisplay">Untitled Note</div>
+          <div class="gadgets">
+            <div class="font-size">
+              <input
+                class="size-input"
+                id="font-size"
+                type="number"
+                onchange="fontSize()"
+              />
+              <span class="unit">px</span>
+            </div>
+            <button class="button-gadget" onclick="saveNote()">Save</button>
+            <button class="button-gadget" onclick="nameNote()">Rename</button>
+            <button class="button-gadget" onclick="newNote()">New</button>
+          </div>
+        </div>
+        <textarea
+          class="text-box"
+          id="text-box"
+          placeholder="Jot down your note here!"
+        ></textarea>
+      </div>
+      <div class="notes-block">
+        <div class="functions">
+          <div class="note-title">Link Clipboard</div>
+          <div class="gadgets">
+            <div class="add-link">
+              <input
+                class="link-input"
+                id="linkInput"
+                placeholder="Paste link here:"
+                type="text"
+              />
+              <button
+                class="button-gadget add-link-btn"
+                onclick="linkClipboard()"
+              >
+                Add
+              </button>
+            </div>
+            <button class="button-gadget" onclick="deleteLink()">Delete</button>
+          </div>
+        </div>
+        <div class="link-box" id="linkBox"></div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2024 Aiden 🐵</p>
+    </footer>
+  </body>
+</html>
